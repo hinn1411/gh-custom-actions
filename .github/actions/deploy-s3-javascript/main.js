@@ -8,7 +8,6 @@ function run() {
   const bucket = core.getInput('bucket', {required: true});
   const bucketRegion = core.getInput('bucket-region', {required: true}); // have default value
   const distFolder = core.getInput('dist-folder', {required: true});
-  AWS_ACCESS_KEY_ID = AKIAXZKQFH3XF6KXNSN4;
   // 2) Upload files
   const s3Uri = `s3://${bucket}`;
   exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${bucketRegion}`);
