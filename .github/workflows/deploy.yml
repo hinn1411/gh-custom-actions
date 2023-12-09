@@ -70,7 +70,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with: 
           role-to-assume: arn:aws:iam::535428415214:role/GithubDemo1
-          aws-region: ap-southeast-2
+          aws-region: us-east-1
       - name: Deploy site (inject js code here)
         id: deploy
 
